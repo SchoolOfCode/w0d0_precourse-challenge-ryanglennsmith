@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
+
+:root {
+  --main-bg-color: #5fbb97;
+  --offset-bg-color: #8ddca4;
+  --border-color: #345995;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  /* Setting a base font size of 10px give us easier rem calculations
+     Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+   */
+  font-size: 10px;
+}
+/* User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+
+User Story #9: The img element should be centered within its parent element. */
+body {
+  font-family: "Amiri", serif;
+  background-color: var(--main-bg-color);
+  font-size: 2rem;
+}
+h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+h2 {
+  font-size: 3.5rem;
+}
+figcaption {
+  font-size: 1.25rem;
+}
+/* User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size. */
+/* User Story #9: The img element should be centered within its parent element. */
+blockquote {
+  display: block;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 70vw;
+  padding: 8px;
+  max-width: 800px;
+  border: 1px solid var(--border-color);
+  background-color: var(--offset-bg-color);
+}
+
+#image,
+#img-caption,
+.call-me {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85vw;
+  max-width: 1000px;
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  background-color: var(--offset-bg-color);
+  text-align: justify;
+}
+#img-caption {
+  border-top: none;
+}
+.call-me {
+  border: none;
+  text-align: center;
+  background-color: var(--main-bg-color);
+}
+a:link,
+a:visited {
+  color: #ca1551;
+}
+a:hover {
+  color: #fb4d3d;
+}
+@media only screen and (max-width: 700px) {
+  blockquote {
+    margin: none;
+    border: none;
+    width: 95vw;
+    background-color: var(--offset-bg-color);
+  }
+  #image,
+  #img-caption {
+    width: 95vw;
+    margin: none;
+    border: none;
+  }
+}
